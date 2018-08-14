@@ -58,7 +58,6 @@ function temperatureToColor(temperature) {
         {temp: [-30, -20], color: '#00FFCC'},
         {temp: [-40, -30], color: '#5555FF'},
     ];
-    console.log('TEMPERATURA');
     var oneTempColor, colorr;
     if (temperature >= 40) {
         colorr = "#FF0000";  // Самый красный
