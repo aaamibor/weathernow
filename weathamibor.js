@@ -1,7 +1,7 @@
 var myMap = L.map('amibormap'); //.setView([55.6, 37.723371], 10);
 
 // Тайловая растровая подложка
-var osmTiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png');
+var osmTiles = L.tileLayer('http://a.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png'/*'https://tile.openstreetmap.org/{z}/{x}/{y}.png'*/);
 
 osmTiles.addTo(myMap);
 
