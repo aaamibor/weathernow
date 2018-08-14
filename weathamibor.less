@@ -1,0 +1,27 @@
+@tempColor: #ff0000;
+@windColor: #0000ff;
+@windAngle: rotate(45deg);
+
+.map-marker div.arrow {
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 30px solid; 
+    border-bottom-color: @windColor;
+    margin-top: -35px;
+    margin-left: 15px;
+    transform: @windAngle;
+
+}
+
+.map-marker div.icon {
+    background-color: #fff;
+    border: 5px solid;
+    border-color: @tempColor;
+    height: 30px;
+    width: 30px;
+    border-radius: 20%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+}
