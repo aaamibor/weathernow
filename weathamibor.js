@@ -109,7 +109,7 @@ function windColor(windSpeed) {
 function gettingJSON(coordinates) {
     var weaJson;
     // $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=55&lon=37&APPID=ab930bccc92605497e8a43b03e01545",
-    $.getJSON("http://api.apixu.com/v1/current.json?key=6d8d2baf10af41f7b3033141180208&q=" + coordinates, function myJson(json) {
+    $.getJSON("https://api.apixu.com/v1/current.json?key=6d8d2baf10af41f7b3033141180208&q=" + coordinates, function myJson(json) {
 		console.log(json);
 		workWithJson(json);
 	});
