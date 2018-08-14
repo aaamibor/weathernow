@@ -1,4 +1,4 @@
-var myMap = L.map('amibormap').setView([55.6, 37.723371], 10);
+var myMap = L.map('amibormap'); //.setView([55.6, 37.723371], 10);
 
 // Тайловая растровая подложка
 var osmTiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png');
@@ -108,8 +108,47 @@ function windColor(windSpeed) {
 function gettingJSON(coordinates) {
     var weaJson;
     // $.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=55&lon=37&APPID=ab930bccc92605497e8a43b03e01545",
-    $.getJSON("https://api.apixu.com/v1/current.json?key=6d8d2baf10af41f7b3033141180208&q=" + coordinates, function myJson(json) {
+    /* $.getJSON("https://api.apixu.com/v1/current.json?key=6d8d2baf10af41f7b3033141180208&q=" + coordinates, function myJson(json) {
 		console.log(json);
 		workWithJson(json);
-	});
+	});*/
+	weaJson = {
+        "location":{
+            "name":"Izmaylovo",
+            "region":"Moskva",
+            "country":"Russia",
+            "lat":55.81,
+            "lon":37.72,
+            "tz_id":"Europe/Moscow",
+            "localtime_epoch":1534060864,
+            "localtime":"2018-08-12 11:01"
+        },
+        "current":{
+            "last_updated_epoch":1534059911,
+            "last_updated":"2018-08-12 10:45",
+            "temp_c":25,
+            "temp_f":77,
+            "is_day":1,
+            "condition":{
+                "text":"Sunny",
+                "icon":"//cdn.apixu.com/weather/64x64/day/113.png",
+                "code":1000
+            },
+            "wind_mph":13.6,
+            "wind_kph":22,
+            "wind_degree":190,
+            "wind_dir":"S",
+            "pressure_mb":1014,
+            "pressure_in":30.4,
+            "precip_mm":0,
+            "precip_in":0,
+            "humidity":44,
+            "cloud":0,
+            "feelslike_c":25.6,
+            "feelslike_f":78,
+            "vis_km":10,
+            "vis_miles":6
+        }
+    };
+    workWithJson(weaJson);
 }
